@@ -12,7 +12,7 @@
         android:theme="@style/Theme.FinalGradeCalculatorApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.gradecalculator.GradeCalculatorActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +21,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.gradecalculator.GradeCalculatorActivity"
+            android:exported="true"> </activity>
+        <activity
             android:name=".ui.main.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
