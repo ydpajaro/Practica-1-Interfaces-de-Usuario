@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#4caf50</color>
     <color name="blue_grey">#ced7db</color>
+    <color name="texto">#5C5F61</color>
+    <color name="texto2">#FF000000</color>
 
 </resources>

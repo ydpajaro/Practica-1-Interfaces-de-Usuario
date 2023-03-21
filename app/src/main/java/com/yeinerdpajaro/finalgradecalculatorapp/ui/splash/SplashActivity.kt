@@ -24,6 +24,7 @@ class SplashActivity : AppCompatActivity() {
         timer.schedule(timerTask {
             val intent = Intent(this@SplashActivity, GradeCalculatorActivity::class.java)
             startActivity(intent)
+            finish()
         }, 2000
         )
 

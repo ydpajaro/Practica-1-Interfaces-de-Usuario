@@ -15,31 +15,42 @@ class GradeCalculatorActivity : AppCompatActivity() {
         var view = GradeCalculatorBinding.root
         setContentView(view)
         GradeCalculatorBinding.calculateActionButton.setOnClickListener{
-            val noteOne = GradeCalculatorBinding.noteOneEditText.text.toString().toDouble()
-            val noteTwo = GradeCalculatorBinding.noteTwoEditText.text.toString().toDouble()
-            val noteThree = GradeCalculatorBinding.noteTrheeEditText.text.toString().toDouble()
-            val noteFour = GradeCalculatorBinding.noteFourEditText.text.toString().toDouble()
 
+            val noteOne = GradeCalculatorBinding.noteOneEditText.text.toString()
+            val noteTwo = GradeCalculatorBinding.noteTwoEditText.text.toString()
+            val noteThree = GradeCalculatorBinding.noteTrheeEditText.text.toString()
+            val noteFour = GradeCalculatorBinding.noteFourEditText.text.toString()
 
-
-            if(noteOne >= 0.0 && noteOne <= 5.0 && noteTwo >= 0.0 && noteTwo <= 5.0 && noteThree >= 0.0 &&  noteThree <= 5.0 && noteFour >= 0.0 &&  noteFour <= 5.0 ){
-
-                var resultado = noteOne*0.6 + noteTwo*0.07 + noteThree*0.08 + noteFour*0.25
-                GradeCalculatorBinding.resultTextView.setText("Su nota final es: $resultado")
-                GradeCalculatorBinding.noteOneEditText.setText("")
-                GradeCalculatorBinding.noteTwoEditText.setText("")
-                GradeCalculatorBinding.noteTrheeEditText.setText("")
-                GradeCalculatorBinding.noteFourEditText.setText("")
-
+            if (noteOne == "." || noteOne == "" || noteTwo == "." || noteTwo == "" || noteThree == "." || noteThree == "" || noteFour == "." || noteFour == "") {
+                GradeCalculatorBinding.resultTextView.text="Error. No se puede poner '.' ni dejar espacios vacíos en ningún valor."
             }
-
 
             else {
 
-                GradeCalculatorBinding.resultTextView.text="Error. Debe ingresar valores entre cero y cinco"
+                val noteOne = GradeCalculatorBinding.noteOneEditText.text.toString().toFloat()
+                val noteTwo = GradeCalculatorBinding.noteTwoEditText.text.toString().toFloat()
+                val noteThree = GradeCalculatorBinding.noteTrheeEditText.text.toString().toFloat()
+                val noteFour = GradeCalculatorBinding.noteFourEditText.text.toString().toFloat()
+
+
+
+                if (noteOne >= 0.0 && noteOne <= 5.0 && noteTwo >= 0.0 && noteTwo <= 5.0 && noteThree >= 0.0 && noteThree <= 5.0 && noteFour >= 0.0 && noteFour <= 5.0) {
+
+                    var resultado =
+                        (noteOne * 0.6 + noteTwo * 0.07 + noteThree * 0.08 + noteFour * 0.25).toFloat()
+                    GradeCalculatorBinding.resultTextView.setText("Su nota final es: $resultado")
+                    /*GradeCalculatorBinding.noteOneEditText.setText("")
+                    GradeCalculatorBinding.noteTwoEditText.setText("")
+                    GradeCalculatorBinding.noteTrheeEditText.setText("")
+                    GradeCalculatorBinding.noteFourEditText.setText("")*/
+
+                } else {
+
+                    GradeCalculatorBinding.resultTextView.text =
+                        "Error. Debe ingresar valores entre cero y cinco."
+                }
+
             }
-
-
 
         }
 
