@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculadora de Nota</string>
+    <string name="how_was_the_service">Tip (%)</string>
+    <string name="round_up_tip">Round up tip?</string>
+    <string name="grade_calculator">Calculadora de Nota</string>
+    <string name="enter_note_one">Prácticas del laboratorio (60%)</string>
+    <string name="enter_note_two">Primer avance del proyecto final (7%)</string>
+    <string name="enter_note_three">Segundo avance del proyecto final (8%)</string>
+    <string name="enter_note_four">Proyecto final (25%)</string>
+    <string name="calculator">Calcular</string>
+    <string name="info">Información</string>
+    <string name="result">Resultado</string>
+</resources>
